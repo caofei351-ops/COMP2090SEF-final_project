@@ -160,8 +160,7 @@ Manual recording of user meal balances and cafeteria sales data is easy to have 
 
 ## <a name="o"></a>🐡:task2 contents- Circular Buffer and Search Algorithm
 - [How is the code specifically implemented?](#code files)
-- [Project Demonstration ](#video)
-- [User Guide](#user guide)
+- [User Guide](#guide)
 - [Video](#video)
 - [References](#references)
 
@@ -183,7 +182,7 @@ A* is a smart pathfinding algorithm that finds the shortest route between two po
 *这里是要求的python源代码文件: Python implementation and basic test cases for the Circular Buffer data structure.
 *这里是要求的python源代码文件: Python implementation and basic test cases for the A* Search Algorithm.
 
-## <a name = "user guide"></a>🚀:User Guide 
+## <a name = "guide"></a>🚀:User Guide 
 
 1. Ensure you have Python 3.x installed on your local environment.
 2. Clone this repository to your machine.
