@@ -159,7 +159,7 @@ This standardized data management method ensures data security and easy operatio
 Manual recording of user meal balances and cafeteria sales data is easy to have typos and data inconsistencies. The system encapsulates balance management in user classes (with negative recharge validation) and uses a singleton SalesRecord class to track global sales data—both relying on Python numeric types and basic data structures for real-time, accurate data update and storage, ensuring data integrity and consistency across the entire system.
 
 ## <a name="o"></a>🐡:task2 contents- Circular Buffer and Search Algorithm
-- [How is the code specifically implemented?](#code files)
+- [How is the codes specifically implemented? ](#code files)
 - [User Guide](#guide)
 - [Video](#video)
 - [References](#references)
