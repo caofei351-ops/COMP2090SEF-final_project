@@ -8,16 +8,21 @@ Group member: Cao Fei(13755803), Pan HaoWen(13752390),Xin YueYing(13795420)
 - [How did this idea come about?](#idea)
 - [The usage of the OOP concepts](#function)
 - [What problems can be solved?](#problem)
-- [User Guide](#guide)
-- [Video](#video)
+- [User Guide](#guide1)
+- [Video](#video1)
 
 
 ## <a name = "guide"></a>🚀:User Guide
+1. Ensure you have Python 3.x installed on your local environment.
+2. Clone this repository to your machine.
 
+3. To execute the self-ordering system, run:
+```bash
+python filename.py
 
 ## <a name = "user guide"></a>🎥:Project Demonstration
 
-- 
+
 ## <a name="idea"></a>🧠:How did this idea come about?
 This self-service ordering system is designed to address the common problems we face in daily campus life:
 
@@ -167,6 +172,31 @@ This standardized data management method ensures data security and easy operatio
 
 Manual recording of user meal balances and cafeteria sales data is easy to have typos and data inconsistencies. The system encapsulates balance management in user classes (with negative recharge validation) and uses a singleton SalesRecord class to track global sales data—both relying on Python numeric types and basic data structures for real-time, accurate data update and storage, ensuring data integrity and consistency across the entire system.
 
+
+
+## <a name = "guide1"></a>🚀:User Guide
+1. Ensure you have Python 3.x installed on your local environment.
+2. Clone this repository to your machine.
+
+3. To execute the data structure demonstration, run:
+```bash
+python filename.py
+```
+
+4. To execute the algorithm demonstration, run:
+```bash
+python filename.py
+```
+
+
+
+
+
+## <a name = "video1"></a>🎥:Project Demonstration
+
+
+
+
 ## <a name="o"></a>🐡:task2 contents- Circular Buffer and Search Algorithm
 - [How is the code specifically implemented?](#code)
 - [User Guide](#guide)
@@ -205,19 +235,19 @@ python filename.py
 python filename.py
 ```
 
-## <a name = "user guide"></a>🎥:Project Demonstration 
+## <a name = "video"></a>🎥:Project Demonstration 
 [the link to the video]
  
 
 
 ## <a name="update"></a>🕵️:Update
-- **2026.01.29**: We form our group and study what is Github and how to use it.
-- **2026.02.03**: We reviewed the specific requirements for the group project. At the same time we analyzed some project examples from the previous semester and Github. Finally, we chose the ordering system of HLMU coffee as our task 1.
+- **2026.01.29**: We formed our group and studied what Github is and how to use it.
+- **2026.02.03**: We reviewed the specific requirements for the group project. At the same time we analyzed some project examples from the previous semester and Github. Finally, we chose the ordering system of HkMU coffee as our task 1.
 - **2026.02.06**:The specific process of the code has been determined.
 - **2026.02.06**:The specific division of labor for Task 1 has been determined.
 - **2026.02.26**:The specific division of labor for Task 2 has been determined.
 - **2026.02.27**The two topics of task 2 has been confirmed.
-- **2026.02.28**:We finish the code for task1.
+- **2026.02.28**:We finished the code for task1.
 - 
   
 ## <a name="contact"></a>💙:Contact
