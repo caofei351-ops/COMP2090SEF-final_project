@@ -1,11 +1,11 @@
 class Dish:
-    def __init__(self, name, student_price, normal_price):
-        self.name = name  
+    def __init__(self, name, student_price, retail_price):
+        self.name = name
         self.student_price = student_price
-        self.normal_price = normal_price
+        self.retail_price = retail_price
 
     def get_type(self):
-        raise NotImplementedError("Subclasses must implement get_type")
+        raise NotImplementedError("Subclasses must implement get_type method")
 
 class MainCourse(Dish):
     def get_type(self):
@@ -21,7 +21,7 @@ class Drink(Dish):
 
 class Menu:
     def __init__(self):
-        self.dishes = [] 
+        self.dishes = []
 
     def add_dish(self, dish):
         if isinstance(dish, Dish):
@@ -32,69 +32,68 @@ class Menu:
     def show_menu(self):
         print("\n=== HKMUcoffee Menu ===")
         dish_types = ["Main Course", "Snack", "Drink"]
-        type_titles = {"Main Course":"[all day Breakfast & hot dishes]",
-                       "Snack":"[Hot Sandwiches]",
-                       "Drink":"[PREMIUM COFFEE]"}
-        
+        type_titles = {
+            "Main Course": "[Afternoon Tea]",
+            "Snack": "[Hot Sandwiches]",
+            "Drink": "[PREMIUM COFFEE]"
+        }
+
+        global_idx = 1
+
         for t in dish_types:
             print(f"\n{t} {type_titles[t]}")
-            type_dishes = [d for d in self.dishes if d.get_type() == t]
-            if not type_dishes:
+            print(f"{'No.':<4} {'Name of dishes':<40} {'STAFF & STUDENT PRICE':<15} {'RETAIL PRICE':<10}")
+            print("-" * 80)
+            current_dishes = [d for d in self.dishes if d.get_type() == t]
+            if not current_dishes:
                 print("  No dishes available")
                 continue
-            print(f"{'':<4} {'Name of dishes':<35} {'STAFF & STUDENT PRICE':<15} {'RETAIL PRICE':<10}")
-            print("-" * 70)
-            for idx, dish in enumerate(type_dishes, 1):
-                print(f"  {idx:<4}. {dish.name:<35} ${dish.student_price:<14} ${dish.normal_price:<10}")
+            for dish in current_dishes:
+                print(f" {global_idx:<4}. {dish.name:<40} ${dish.student_price:<14} ${dish.retail_price:<10}")
+                global_idx += 1
 
-    def get_dish_by_index(self, idx):
-        actual_idx = idx - 1
+    def get_dish_by_index(self, actual_idx):
         if 0 <= actual_idx < len(self.dishes):
             return self.dishes[actual_idx]
         else:
             return None
 
     def init_default_dishes(self):
-        self.add_dish(MainCourse("All-Day Breakfast", 54, 68))
-        self.add_dish(MainCourse("Bolognese Pasta with Fried Egg Toast", 38, 45))
-        self.add_dish(MainCourse("Custom 2-Topping Demae Ramen", 29, 36))
-        self.add_dish(MainCourse("Custom 2-Topping Spicy Noodles", 34, 42))
-        self.add_dish(MainCourse("Prawn Toast with Quinoa Garden Salad", 30, 36))
-        self.add_dish(MainCourse("Korean Yuzu Chicken Wings with Fries", 28, 36))
+        # Main Course
+        self.add_dish(MainCourse("All Day Breakfast", 54, 68))
+        self.add_dish(MainCourse("Spaghetti Bolognese with Fried Egg Toast", 38, 45))
+        self.add_dish(MainCourse("Nissin Demae Itcho with Two Toppings", 29, 36))
+        self.add_dish(MainCourse("Shin Ramyun with Two Toppings", 34, 42))
+        self.add_dish(MainCourse("Shrimp Toast with Quinoa Green Salad", 30, 36))
+        self.add_dish(MainCourse("Korean Yugi Chicken Wings with Fries", 28, 36))
         self.add_dish(MainCourse("American Hot Dog with Fries", 29, 36))
-        self.add_dish(MainCourse("Avocado Cheddar Cheese Panini", 37, 48))
-        self.add_dish(MainCourse("Sous Vide Chicken Caesar Panini", 37, 48))
-        self.add_dish(MainCourse("Honey Mustard Beef & Mushroom Panini", 39, 50))
-        self.add_dish(MainCourse("American Honey Mustard Smoked Salmon Panini", 39, 50))
-        self.add_dish(MainCourse("Avocado Quinoa Veggie Burrito", 33, 43))
-        self.add_dish(MainCourse("Sous Vide Chicken Caesar Burrito", 33, 43))
-        self.add_dish(MainCourse("Honey Mustard Beef & Mushroom Burrito", 35, 46))
-        self.add_dish(MainCourse("Smoked Salmon & Egg Scramble Burrito", 35, 45))
 
+        # Snack (Hot Sandwiches)
+        self.add_dish(Snack("Avocado & Cheddar Cheese Panini", 37, 48))
+        self.add_dish(Snack("Slow Cooked Chicken Caesar Panini", 37, 48))
+        self.add_dish(Snack("Roast Beef, Wild Mushroom & Mustard Panini", 39, 50))
+        self.add_dish(Snack("Honey Mustard & Smoked Salmon Panini", 39, 50))
+        self.add_dish(Snack("Avocado & Quinoa Mexican Wrap", 33, 43))
+        self.add_dish(Snack("Slow Cooked Chicken Caesar Mexican Wrap", 33, 43))
+        self.add_dish(Snack("Roast Beef, Wild Mushroom & Honey Mustard Wrap", 35, 46))
+        self.add_dish(Snack("Smoked Salmon & Egg Mexican Wrap", 35, 45))
 
-        self.add_dish(Snack("Latte / Cheesecake / Cappuccino", 12, 12))
-        self.add_dish(Snack("Any Premium Drink", 2, 2))
-        self.add_dish(Snack("Specialty Drink", 13, 13))
-        self.add_dish(Snack("Seasoned Fresh Fruit Cup", 10, 10))
-        self.add_dish(Snack("Daily Soup", 10, 10))
-        self.add_dish(Snack("Seasoned Yogurt Parfait", 16, 16))
-
+        # Drinks
         self.add_dish(Drink("Double Espresso (2oz)", 16, 20))
         self.add_dish(Drink("Black Coffee", 19, 24))
         self.add_dish(Drink("White Coffee", 22, 28))
         self.add_dish(Drink("Cappuccino", 22, 28))
-        self.add_dish(Drink("Café Latte", 22, 28))
-        self.add_dish(Drink("Mocha Coffee", 27, 33))
+        self.add_dish(Drink("Caffè Latte", 22, 28))
+        self.add_dish(Drink("Caffè Mocha", 27, 33))
         self.add_dish(Drink("Hazelnut Latte", 27, 33))
         self.add_dish(Drink("Caramel Latte", 27, 33))
         self.add_dish(Drink("Dirty Coffee", 31, 39))
-        self.add_dish(Drink("Tonic Coffee", 31, 39))
+        self.add_dish(Drink("Coffee Tonic", 31, 39))
         self.add_dish(Drink("Espresso Shot", 5, 5))
-        self.add_dish(Drink("Swap to Oat Milk", 5, 5))
-        self.add_dish(Drink("Swap to Skim Milk", 0, 0))
-        
-if __name__ == "__main__":
-    test_menu = Menu()
-    test_menu.init_default_dishes()
-    test_menu.show_menu()
+        self.add_dish(Drink("Change to Oat Milk", 5, 5))
+        self.add_dish(Drink("Change to Skimmed Milk", 0, 0))
 
+if __name__ == "__main__":
+    menu = Menu()
+    menu.init_default_dishes()
+    menu.show_menu()
