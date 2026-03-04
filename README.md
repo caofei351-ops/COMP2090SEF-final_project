@@ -12,15 +12,15 @@ Group member: Cao Fei(13755803), Pan HaoWen(13752390),Xin YueYing(13795420)
 - [Video](#video1)
 
 
-## <a name = "guide"></a>🚀:User Guide
+## <a name = "guide1"></a>🚀:User Guide
 1. Ensure you have Python 3.x installed on your local environment.
 2. Clone this repository to your machine.
 
-3. To execute the self-ordering system, run:
+3. To execute the self-service ordering system, run:
 ```bash
-python filename.py
+python task1/main-system.py
 
-## <a name = "user guide"></a>🎥:Project Demonstration
+## <a name = "video1"></a>🎥:Project Demonstration
 
 
 ## <a name="idea"></a>🧠:How did this idea come about?
