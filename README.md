@@ -37,9 +37,12 @@ This self-service ordering system is designed to address the common problems we 
 
 We want to build a simple and practical system based on OOP knowledge to automate the ordering process, reduce human mistakes, and allow everyone to easily the order progress. The system is designed to be modular, scalable, and easy to maintain, which aligns with the software design principles we learned in class.
 
-This is the real menu record of HKMU Coffee:![menu image1](https://github.com/user-attachments/assets/ad82172b-7525-43bb-b684-20872895e23d)![menu image2](https://github.com/user-attachments/assets/133a84d5-2a1c-40ca-b5ce-9ce48d1e1d7c)
-![menu image3](https://github.com/user-attachments/assets/3f131bad-b09c-4a48-9ab6-e51294c8fc06)
+This is the real menu record of HKMU Coffee:
 
+<details>
+	<summary>Click to view HKMU Coffee menu photo </summary>
+	<img src="![menu image1](https://github.com/user-attachments/assets/ad82172b-7525-43bb-b684-20872895e23d)![menu image2](https://github.com/user-attachments/assets/133a84d5-2a1c-40ca-b5ce-9ce48d1e1d7c) ![menu image3](https://github.com/user-attachments/assets/3f131bad-b09c-4a48-9ab6-e51294c8fc06)" alt="HKMU Coffee Menu" width="70%">
+</details>
 
 
 ## <a name="function"></a>🤔: The usage of the OOP concepts
